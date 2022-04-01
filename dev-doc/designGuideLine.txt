@@ -1,0 +1,21 @@
+Design Guideline
+================
+
+############################################
+BASICS
+############################################
+The goal of Oxalic is to be a simple
+programming language, with a simple
+syntax, for simple programs. 
+
+Oxalic only has four key--tokens,
+(A key-token being a keyword but with
+symbols only, Oxalic has a few tokens).
+The key-tokens are:
+@  - Get user input
+#  - Print
+?  - If
+&  - Return
+
+These are the only four needed to make
+a functional programminglanguage. 

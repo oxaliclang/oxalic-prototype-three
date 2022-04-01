@@ -1,0 +1,11 @@
+               PROGRAM 
+                __|__
+               /     \
+add:(first,second)  add(1,2)
+       |
+       &
+       |
+       +
+      _|_
+     /   \
+  first second

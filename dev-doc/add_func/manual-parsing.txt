@@ -1,0 +1,9 @@
+                         PROGRAM
+                          /   \
+FUNCTION: add:(first,second) FUNCTION CALL add(1,2)
+          |
+        BLOCK
+          |
+        RETURN
+        / | \
+    first + second

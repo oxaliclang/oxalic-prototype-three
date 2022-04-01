@@ -1,0 +1,5 @@
+add : ( first, second ) {
+    & first + second;
+}
+
+add ( 1, 2 );
