@@ -12,8 +12,7 @@ Oxalic only has four key--tokens,
 (A key-token being a keyword but with
 symbols only, Oxalic has a few tokens).
 The key-tokens are:
-@  - Get user input
-#  - Print
+@  - Print
 ?  - If
 &  - Return
 
