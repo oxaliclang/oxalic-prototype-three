@@ -60,9 +60,13 @@ def lexer(line):
         if token == "@": finalTokenList.append(["PRINT", token])
         if token == "?": finalTokenList.append(["IF", token])
         if token == "#": finalTokenList.append(["COMMENT", token])
-        if token == " ": 
-            if nextToken != " ":
-                finalTokenList.append(["SPACE", token])
+        if token == "+": finalTokenList.append(["ADD", token])
+        if token == "-": finalTokenList.append(["SUBTRACT", token])
+        if token == "*": finalTokenList.append(["MULTIPLY", token])
+        if token == "/": finalTokenList.append(["DIVIDE", token])
+        # if token == " ": 
+        #     if nextToken != " ":
+        #         finalTokenList.append(["SPACE", token])
         if token.isnumeric(): finalTokenList.append(["INTEGER", token])
         if token.isalpha(): finalTokenList.append(["IDENTIFIER", token])
 
@@ -71,17 +75,17 @@ def lexer(line):
 def parser(lexerContent):
     position = 0
     ast = list()
-    lines = list()
-    line = list()
-    while position < len(lexedContent):
-        if lexerContent[position][0] != "LINE_TERMINATOR": line.append(lexerContent[position])
-        else:
-            line.append(lexerContent[position])
-            lines.append(line) 
-            line = list()
+    while position < len(lexerContent):
+        print(lexerContent[position])
+        if lexerContent[position][0] == "PRINT":
+            toprint = list()
+            while lexedContent[position][0] != "LINE_TERMINATOR":
+                toprint.append(lexedContent[position])
+                position += 1
+            ast.append(toprint)
         position += 1
-    print(lines)
-
+    
+    print(ast)
 
 lineCount = int()
 with open(sys.argv[1]) as oxafile:
